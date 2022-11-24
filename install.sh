@@ -41,3 +41,5 @@ sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger -y
 #sudo reaver -i wlan1 -vv -b xx:xx:xx:xx:xx:xx
 
 sudo rm -rf /tmp/wifite-repeater
+echo "rebooting..."
+sleep 2 && sudo reboot
