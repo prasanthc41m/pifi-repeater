@@ -39,3 +39,5 @@ sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger -y
 
 #sudo airodump-ng --wps -i wlan1
 #sudo reaver -i wlan1 -vv -b xx:xx:xx:xx:xx:xx
+
+sudo rm -rf /tmp/wifite-repeater
