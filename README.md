@@ -1,6 +1,8 @@
 # Raspberry-Pi Wifite Repeater
 WiFi Repeater with Wifite for Raspberry pi 
 
+<img src="https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/pifi.png">
+
 ## Installation
 ```
 sudo su
