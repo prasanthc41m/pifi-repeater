@@ -22,3 +22,9 @@ sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/uninstall.sh && bash uninstall.sh
 ```
+
+## Download handshake file captured with wifite
+```
+cd ~/hs && python3 -m http.server
+```
+Now browse http://192.168.7.1:8000
