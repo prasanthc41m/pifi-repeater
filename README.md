@@ -25,7 +25,7 @@ cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/m
 ```
 
 ## Download handshake file captured with wifite
-```
+<!--- ```
 cd ~/hs && python3 -m http.server
-```
-Now browse http://192.168.7.1:8000
+``` -->
+Browse http://192.168.7.1:8000
