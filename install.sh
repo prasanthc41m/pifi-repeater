@@ -37,6 +37,15 @@ sudo systemctl status server
 
 sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger -y
 
+sudo apt-get install python3-scapy libssl-dev zlib1g-dev libpcap0.8-dev python2-dev python-is-python2
+cd /tmp
+wget -c https://github.com/JPaulMora/Pyrit/archive/v0.5.0.tar.gz
+tar -xf v0.5.0.tar.gz
+cd Pyrit-0.5.0
+sed -i "s/COMPILE_AESNI/NO_COMPILE_AESNI/" cpyrit/_cpyrit_cpu.c
+python2 setup.py build
+sudo python2 setup.py install
+
 #sudo airodump-ng --wps -i wlan1
 #sudo reaver -i wlan1 -vv -b xx:xx:xx:xx:xx:xx
 
