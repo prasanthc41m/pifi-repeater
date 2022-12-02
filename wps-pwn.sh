@@ -49,7 +49,7 @@ echo -e ${col} "Running reaver" ${nc}
 
 
 # Disabling monitor-mode and restore internet
-echo -e ${col} "Restoring wlan1" ${nc}
+echo -e ${col} "Restoring manged-mode" ${nc}
  sudo ip link set wlan1 down
  sudo iw wlan1 set type managed
  sudo ip link set wlan1 up
