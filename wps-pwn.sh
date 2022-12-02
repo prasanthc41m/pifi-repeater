@@ -9,7 +9,9 @@ echo -e ${col} "Enabling monitor-mode" ${nc}
 
  sudo ip link set wlan1 down
  sudo iw wlan1 set monitor none
+ sudo macchanger -b -r wlan1
  sudo ip link set wlan1 up
+
 
 # WPS network list
 echo -e ${col} "Scaning wps network for 30 sec" ${nc}
