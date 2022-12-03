@@ -47,7 +47,8 @@ python2 setup.py build
 sudo python2 setup.py install
 
 mv wps-pwn.sh ~/
-sudo chmod 755 wps-pwn.sh
+mv pwn-mode.sh ~/
+sudo chmod 755 *.sh
 sudo chmod 777 ~/hs/
 
 sudo rm -rf /tmp/wifite-repeater
