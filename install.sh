@@ -35,7 +35,7 @@ sudo systemctl enable server
 sudo systemctl start server
 sudo systemctl status server
 
-sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger -y
+sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger john cowpatty -y
 
 sudo apt-get install python3-scapy libssl-dev zlib1g-dev libpcap0.8-dev python2-dev python-is-python2
 cd /tmp
