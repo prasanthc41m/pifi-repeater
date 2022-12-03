@@ -1,4 +1,4 @@
-# Raspberry-Pi Wifite Repeater
+# Raspberry-Pi Repeater with wifi pentest tools
 WiFi Repeater with Wifite for Raspberry pi 
 
 <img src="https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/pifi.png">
