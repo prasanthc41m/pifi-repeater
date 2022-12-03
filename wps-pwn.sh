@@ -13,6 +13,7 @@ echo -e ${col} "Enabling monitor-mode" ${nc}
  sudo macchanger -p wlan1
  sudo ip link set wlan1 up
 
+ cd /tmp
 
 # WPS network list
 echo -e ${col} "Scaning wps network for 30 sec" ${nc}
