@@ -37,11 +37,6 @@ sudo systemctl status server
 
 sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger john cowpatty jq -y
 
-wget https://github.com/hashcat/hashcat-utils/archive/master.zip
-unzip master.zip
-cd hashcat-utils-master/src
-make
-
 sudo apt-get install python3-scapy libssl-dev zlib1g-dev libpcap0.8-dev python2-dev python-is-python2
 cd /tmp
 wget -c https://github.com/JPaulMora/Pyrit/archive/v0.5.0.tar.gz
