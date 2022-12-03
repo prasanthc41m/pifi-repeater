@@ -28,6 +28,7 @@ sudo mv 12-wlan1.network /etc/systemd/network/12-wlan1.network
 sudo -H pip install wifi
 sudo apt install python-flask python3-flask -y
 
+mv wps-pwn.sh ~/
 mv -r webui/ ~/
 sudo mv webserver.service /lib/systemd/system/webserver.service
 systemctl daemon-reload
@@ -45,9 +46,6 @@ cd Pyrit-0.5.0
 sed -i "s/COMPILE_AESNI/NO_COMPILE_AESNI/" cpyrit/_cpyrit_cpu.c
 python2 setup.py build
 sudo python2 setup.py install
-
-#sudo airodump-ng --wps -i wlan1
-#sudo reaver -i wlan1 -vv -b xx:xx:xx:xx:xx:xx
 
 sudo rm -rf /tmp/wifite-repeater
 
