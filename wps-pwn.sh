@@ -1,4 +1,5 @@
 #!/bin/bash
+#This script run scan and crack WPS using wash and reaver
 
 #Color
  col='\033[0;33m'       # Yellow
