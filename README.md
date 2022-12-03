@@ -24,8 +24,11 @@ sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/uninstall.sh && bash uninstall.sh
 ```
 
-## Download handshake file captured with wifite
-<!--- ```
-cd ~/hs && python3 -m http.server
-``` -->
+## Auto pwn script for wps using reaver
+```
+./wps-pwn.sh
+```
+
+## Wps cracked keys and handshake file captured 
+
 Browse http://192.168.7.1:8000
