@@ -24,7 +24,7 @@ echo -e ${col} "Scaning wps network for 30 sec" ${nc}
  cat washout.txt
 
 # Building bssid only list
- rm bssid.txt
+ sudo rm bssid.txt
 echo -e ${col} "Creating bssid list" ${nc}
 
  filename='washout.txt'
@@ -41,7 +41,7 @@ echo -e ${col} "Creating bssid list" ${nc}
 
 # Cracking using reaver 
 echo -e ${col} "Running reaver" ${nc}
- rm wps-pwned.txt
+ sudo rm wps-pwned.txt
 
  sudo rm /var/lib/reaver/*
  while IFS= read -r line; do
