@@ -14,6 +14,7 @@ echo -e ${col} "Enabling monitor-mode" ${nc}
  sudo ip link set wlan1 up
 
  sudo chmod 777 /home/pi/hs/
+ sudo chmod 777 /tmp
  cd /tmp
 
 # WPS network list
