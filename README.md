@@ -5,6 +5,9 @@ WiFi Repeater with Wifite for Raspberry pi
 
 ## Installation
 Direct access pi using a monitor and keyboard 
+
+First create a user called ```pi``` and run below command
+
 ```
 sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/install.sh && bash install.sh
