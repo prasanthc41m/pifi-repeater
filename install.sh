@@ -30,10 +30,11 @@ sudo apt install python-flask python3-flask -y
 
 mv -r webui/ ~/
 sudo mv webserver.service /lib/systemd/system/webserver.service
+sudo mv pwnmode.service /lib/systemd/system/pwnmode.service
 systemctl daemon-reload
-sudo systemctl enable server
-sudo systemctl start server
-sudo systemctl status server
+sudo systemctl enable webserver
+sudo systemctl start webserver
+sudo systemctl status webserver
 
 sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger john cowpatty jq -y
 
