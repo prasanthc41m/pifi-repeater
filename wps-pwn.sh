@@ -13,7 +13,7 @@ echo -e ${col} "Enabling monitor-mode" ${nc}
  sudo macchanger -p wlan1
  sudo ip link set wlan1 up
 
- sudo chmod 777 ~/hs/
+ sudo chmod 777 /home/pi/hs/
  cd /tmp
 
 # WPS network list
