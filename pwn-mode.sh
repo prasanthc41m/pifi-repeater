@@ -2,6 +2,6 @@
 
 while true; do
 
-    bash auto.sh && wait
+    bash wps-pwn.sh && wait
 
 done
