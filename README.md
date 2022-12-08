@@ -27,12 +27,16 @@ sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/uninstall.sh && bash uninstall.sh
 ```
 
-## Auto pwn script for wps using reaver headless
+## Auto pwn script for wps using reaver
 ```
 ./wps-pwn.sh
 ```
 Or use ```wifite``` (needs interaction)
 
+## Auto pwn run as a service when boots
+```
+sudo systemctl enable pwnmode
+```
 
 ## Wps cracked keys and handshake file captured 
 
