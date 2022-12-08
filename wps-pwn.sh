@@ -49,6 +49,7 @@ echo -e ${col} "Running reaver" ${nc}
  cp wps-pwned.txt ~/hs/wps-pwned_`date +"%H:%M:%S:%d-%b-%Y"`.txt
  cat wps-pwned.txt
  cd ~/hs && md5sum  * | sort -t ' ' -k 4 -r | awk 'BEGIN{lasthash = ""} $1 == lasthash {print $2} {lasthash = $1}' | xargs rm && cd ~/
+ find ~/hs -size 0 -print -delete
 
 # Disabling monitor-mode and restore internet
 echo -e ${col} "Restoring manged-mode" ${nc}
