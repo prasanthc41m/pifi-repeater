@@ -43,6 +43,7 @@ echo -e ${col} "Creating bssid list" ${nc}
 echo -e ${col} "Running reaver" ${nc}
  sudo rm wps-pwned.txt
 
+ sudo touch /var/lib/reaver/test
  sudo rm /var/lib/reaver/*
  while IFS= read -r line; do
      sudo timeout 60s reaver -q -i wlan1 -b "$line" >> wps-pwned.txt
