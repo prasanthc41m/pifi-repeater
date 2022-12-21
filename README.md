@@ -13,7 +13,7 @@ sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/install.sh && bash install.sh
 ```
 ## Usage
-Browse http://192.168.7.1 to add ssid and password of wifi which need to be extended.
+Browse http://192.168.7.1:81 or http://pi.fi:81 to add ssid and password of wifi which need to be extended.
 
 Default wifi creds of Repeater is SSID: ```Pifi``` and Password: ```Acc3sspo!nt```
 <br>To change Default Repeater SSID and Password ssh to pi and edit
@@ -41,3 +41,8 @@ sudo systemctl enable pwnmode
 ## Wps cracked keys and handshake file captured 
 
 Browse http://192.168.7.1:8000
+
+## Pi-hole
+```
+http://pi.hole/admin/
+```
