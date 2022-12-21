@@ -54,6 +54,9 @@ sudo chmod 777 ~/hs/
 
 sudo rm -rf /tmp/wifite-repeater
 
+#Network-wide ad blocking
+curl -sSL https://install.pi-hole.net | bash
+
 Line="cd ~/hs && python3 -m http.server"
 (crontab -u $(whoami) -l; echo "$line" ) | crontab -u $(whoami) -
 
