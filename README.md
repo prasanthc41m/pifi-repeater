@@ -40,7 +40,7 @@ sudo systemctl enable pwnmode
 
 ## Wps cracked keys and handshake file captured 
 
-Browse http://192.168.7.1:8000
+Browse http://192.168.7.1:8000 or pi.fi:8000
 
 ## Pi-hole
 ```
