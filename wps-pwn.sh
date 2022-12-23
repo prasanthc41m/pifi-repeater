@@ -20,7 +20,7 @@ echo -e ${col} "Enabling monitor-mode" ${nc}
 # WPS network list
 echo -e ${col} "Scaning wps network for 30 sec" ${nc}
 
- sudo timeout 30s wash -i wlan1 > washout.txt
+ sudo bash -c 'timeout 30s wash -i wlan1 > washout.txt'
  cat washout.txt
 
 # Building bssid only list
