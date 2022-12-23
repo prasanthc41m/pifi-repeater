@@ -15,7 +15,7 @@ echo -e ${col} "Enabling monitor-mode" ${nc}
 
  sudo chmod 777 /home/pi/hs/
  sudo chmod 777 /tmp
- cd /tmp
+# cd /tmp
 
 # WPS network list
 echo -e ${col} "Scaning wps network for 30 sec" ${nc}
