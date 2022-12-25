@@ -21,8 +21,9 @@ sed -i 's/,//' tmp
 sed -i 's/"ssid/network={ \n   "ssid/' $a
 sed -i 's/.*psk.*/& \n   }\n/' $a
 
-grep -r -A 2 psk conf_bak > tmp2
-cut -c 64- tmp2 >> tmp
+# Restore wpa-conf from backup
+#grep -r -A 2 psk conf_bak > tmp2
+#cut -c 64- tmp2 >> tmp
 
 echo "country=IN
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
