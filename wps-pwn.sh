@@ -99,7 +99,10 @@ echo -e ${col} "Restoring manged-mode" ${nc}
  sudo ip link set wlan1 down
  sudo iw wlan1 set type managed
  sudo ip link set wlan1 up
-#sudo systemctl restart wpa_supplicant@wlan1.service
+
+# Wifi connected status
+echo -e ${col} "Wifi connected status" ${nc}
+sudo wpa_cli -i wlan1 status | grep ssid
 
 echo -e ${col} "Finished!!" ${nc}
 
