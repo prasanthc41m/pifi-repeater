@@ -58,35 +58,36 @@ echo -e ${col} "Running reaver" ${nc}
 
 # Adding cracked wifi to conf file
 
-grep -v "WPS PIN" wps-pwned.txt > tmpfile
-sed -i 's/: /=/' tmpfile
-sed -i 's/WPA/ /' tmpfile
-sed -i 's/AP/ /' tmpfile
-sed -i 's/+//' tmpfile
-sed -i 's/PSK/psk/' tmpfile
-sed -i 's/SSID/ssid/' tmpfile
+a=tmpfile
+grep -v "WPS PIN" wps-pwned.txt > $a
+sed -i 's/: /=/' $a
+sed -i 's/WPA/ /' $a
+sed -i 's/AP/ /' $a
+sed -i 's/+//' $a
+sed -i 's/PSK/psk/' $a
+sed -i 's/SSID/ssid/' $a
+sed -i 's/[][]//g' $a
 
-sed -e '/psk/s/^/network={/' tmpfile > tmpfile2
-sed 's/.*ssid.*/& }/' tmpfile2 > tmpfile3
-sed "s/'/\"/g"  tmpfile3 > tmpfile4
-sed 's/[][]//g' tmpfile4 > tmpfile5
-cat tmpfile4 | sed 's/[][]//g' > tmpfile5
+sed -i 's/psk/network={ \n   psk/' $a
+sed -i 's/.*ssid.*/& \n   }\n/' $a
+
+cat $a
+echo -e ${col} "Cracked wifi added to wlan1 configuration" ${nc}
 
 echo "country=IN
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1" > tmpfile6
+update_config=1" > header.conf
 
-cat tmpfile5 >> tmpfile6
+cat tmpfile >> header.conf
 mkdir -p ~/conf_bak
-cp tmpfile6 ~/conf_bak/wpa_supplicant-wlan1.conf
-#cat ~/conf_bak/wpa_supplicant-wlan1.conf
+cp header.conf ~/conf_bak/wpa_supplicant-wlan1.conf
 find ~/conf_bak -size 0 -print -delete
 
 sudo mkdir -p /etc/wpa_supplicant/backup
 sudo cp /etc/wpa_supplicant/wpa_supplicant-wlan1.conf /etc/wpa_supplicant/backup/wpa_supplicant-wlan1.conf.backup_`date +"%H:%M:%S:%d-%b-%Y"` 
 find /etc/wpa_supplicant/ -size 0 -print -delete
 sudo bash -c 'cat tmpfile5 >> /etc/wpa_supplicant/wpa_supplicant-wlan1.conf'
-sudo awk '!seen[$0]++' /etc/wpa_supplicant/wpa_supplicant-wlan1.conf > /tmp/wpa_supplicant-wlan1.conf
+sudo awk '!seen[$0]++' /etc/wpa_supplicant/wpa_supplicant-wlan1.conf > /tmp/wpa_supplicant-wlan1.conf 
 sudo mv /tmp/wpa_supplicant-wlan1.conf /etc/wpa_supplicant/wpa_supplicant-wlan1.conf 
 
 rm -rf tmpfile*
