@@ -85,7 +85,7 @@ find ~/conf_bak -size 0 -print -delete
 
 sudo mkdir -p /etc/wpa_supplicant/backup
 sudo cp /etc/wpa_supplicant/wpa_supplicant-wlan1.conf /etc/wpa_supplicant/backup/wpa_supplicant-wlan1.conf.backup_`date +"%H:%M:%S:%d-%b-%Y"` 
-find /etc/wpa_supplicant/ -size 0 -print -delete
+sudo find /etc/wpa_supplicant/ -size 0 -print -delete
 sudo bash -c 'cat tmpfile5 >> /etc/wpa_supplicant/wpa_supplicant-wlan1.conf'
 sudo awk '!seen[$0]++' /etc/wpa_supplicant/wpa_supplicant-wlan1.conf > /tmp/wpa_supplicant-wlan1.conf 
 sudo mv /tmp/wpa_supplicant-wlan1.conf /etc/wpa_supplicant/wpa_supplicant-wlan1.conf 
