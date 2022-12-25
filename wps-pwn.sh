@@ -4,8 +4,7 @@
 #Color
  col='\033[0;33m'       # Yellow
  nc='\033[0m'       # No Color
- 
-sudo wpa_cli -i wlan1 scan_results
+
 # Enable monitor-mode
 echo -e ${col} "Enabling monitor-mode" ${nc}
 
@@ -102,12 +101,10 @@ echo -e ${col} "Restoring manged-mode" ${nc}
 
 # Wifi connected status
 echo -e ${col} "Wifi connected status" ${nc}
-sudo wpa_cli -i wlan1 status | grep ssid
+sleep 10 ; sudo wpa_cli -i wlan1 status | grep ssid
 
 echo -e ${col} "Finished!!" ${nc}
-
- sleep 5
- ping -O -c 4 1.1
+ sleep 10 ; ping -O -c 4 1.1
  
  #sudo systemctl restart wpa_supplicant@wlan1.service
  #sudo systemctl restart wpa_supplicant@wlan0.service
