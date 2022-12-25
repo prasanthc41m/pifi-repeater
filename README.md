@@ -12,6 +12,9 @@ First create a user called ```pi``` and run below command
 sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/install.sh && bash install.sh
 ```
+### Pi-hole installation
+choose interface ```wlan0``` and static ip as setup later. Follow rest as recommended setting. ```Don't forget to note down the password for WebUI.```
+
 ## Usage
 Browse http://192.168.7.1:81 or http://pi.fi:81 to add ssid and password of wifi which need to be extended.
 
