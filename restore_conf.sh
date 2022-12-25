@@ -30,6 +30,7 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1" > header
 
 cat tmp >> header
+cat $a >> header
 #cat header
 
 mkdir -p $d
