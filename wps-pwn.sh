@@ -4,7 +4,8 @@
 #Color
  col='\033[0;33m'       # Yellow
  nc='\033[0m'       # No Color
-
+ 
+sudo wpa_cli -i wlan1 scan_results
 # Enable monitor-mode
 echo -e ${col} "Enabling monitor-mode" ${nc}
 
