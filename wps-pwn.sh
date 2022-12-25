@@ -105,3 +105,6 @@ echo -e ${col} "Finished!!" ${nc}
 
  sleep 5
  ping -O -c 4 1.1
+ 
+ #sudo systemctl restart wpa_supplicant@wlan1.service
+ #sudo systemctl restart wpa_supplicant@wlan0.service
