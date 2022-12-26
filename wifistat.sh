@@ -68,7 +68,7 @@ sudo wpa_cli -i wlan1 status
 echo -e ${G} "Done" ${nc}
 echo "====================================================="
   echo -e ${Y} "Ping Status" ${nc}
-ping google.com -O -c 4  
+ping 1.1 -O -c 4  
 echo -e ${G} "Done" ${nc}
 #  echo "Flag is not set"
 
