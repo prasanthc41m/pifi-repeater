@@ -4,7 +4,7 @@ WiFi Repeater with Wifi cracker for Raspberry pi
 <img src="https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/pifi.png">
 
 ## Installation
-Direct access pi using a monitor and keyboard 
+Direct access pi using a monitor, keyboard and internet. 
 
 First create a user called ```pi``` and run below command to install all needed automatically.
 
@@ -18,6 +18,7 @@ Choose interface ```wlan0``` and in next step choose ```setup static ip later or
 Follow rest as recommended setting. ```Don't forget to note down the password for WebUI.```
 
 ## Uninstall
+To uninstall accesspoint cpoy and paste below commnad in terminal
 ```
 sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/uninstall.sh && bash uninstall.sh
