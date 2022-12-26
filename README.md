@@ -44,7 +44,13 @@ Use auto pwn scripts below to pwn wifi and add cracked network to Accesspoint. A
 ./wifite_pwn.sh
 ```
 
-## Auto pwn run as a service when boots
+## Auto pwn run as a service 
+To start auto pwn mode
+```
+sudo systemctl start pwnmode
+```
+
+To run auto pwn when pi boot 
 ```
 sudo systemctl enable pwnmode
 ```
@@ -56,6 +62,13 @@ Browse http://192.168.7.1:8000 or http://pi.fi:8000
 ## WebUI for add/change ssid and password of wifi
 
 Browse http://192.168.7.1:81 or http://pi.hole:81 to add ssid and password of wifi which need to be extended.
+
+## Connection status
+To check wifi connection status 
+```
+./wifistat.sh
+```
+And you can use ```./wifistat.sh -r``` to disable monitor-mode and restart wlan1 interface 
 
 ## Pi-hole
 ```
