@@ -6,7 +6,7 @@ WiFi Repeater with Wifi cracker for Raspberry pi
 ## Installation
 Direct access pi using a monitor and keyboard 
 
-First create a user called ```pi``` and run below command
+First create a user called ```pi``` and run below command to install all needed automatically.
 
 ```
 sudo su
