@@ -30,11 +30,10 @@ sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/uninstall.sh && bash uninstall.sh
 ```
 
-## Auto pwn script for wps using reaver
+## Auto pwn script for wps using reaver and for wpa using wifite
 ```
 ./wps-pwn.sh
 ```
-And use wifite for wpa
 ```
 ./wifite_pwn.sh
 ```
