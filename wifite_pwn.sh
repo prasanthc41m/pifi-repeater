@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Wifite to auto capture wpa handshake
+# Wifite to auto capture wpa handshake and add to wifi configuration
 a=tmp
 b=wpa_supplicant-wlan1.conf
 c=/etc/wpa_supplicant
