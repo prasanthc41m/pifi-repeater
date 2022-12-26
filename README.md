@@ -34,7 +34,10 @@ cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/m
 ```
 ./wps-pwn.sh
 ```
-Or use ```wifite``` (needs interaction)
+And use wifite for wpa
+```
+./wifite_pwn.sh
+```
 
 ## Auto pwn run as a service when boots
 ```
