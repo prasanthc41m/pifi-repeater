@@ -73,4 +73,8 @@ And you can use ```./wifistat.sh -r``` to disable monitor-mode and restart wlan1
 ## Pi-hole
 To access Pi-hole management WebUI 
 http://pi.hole/admin/
+To reset password 
+```
+pihole -a -p
+```
 
