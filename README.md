@@ -18,7 +18,7 @@ Choose interface ```wlan0``` and in next step choose ```setup static ip later or
 Follow rest as recommended setting. ```Don't forget to note down the password for WebUI.```
 
 ## Uninstall
-To uninstall accesspoint cpoy and paste below commnad in terminal
+To uninstall accesspoint copy and paste below commnad in terminal
 ```
 sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/uninstall.sh && bash uninstall.sh
