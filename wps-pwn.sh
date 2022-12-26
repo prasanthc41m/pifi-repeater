@@ -74,8 +74,8 @@ sed -i 's/PSK/psk/' $a
 sed -i 's/SSID/ssid/' $a
 sed -i 's/[][]//g' $a
 sed -i "s/'/\"/g" $a
-awk '!seen[$0]++' $a > a1 
-mv a1  $a
+#awk '!seen[$0]++' $a > a1 
+#mv a1  $a
 
 sed -i 's/psk/network={ \n   psk/' $a
 sed -i 's/.*ssid.*/& \n   }\n/' $a
