@@ -71,6 +71,6 @@ To check wifi connection status
 And you can use ```./wifistat.sh -r``` to disable monitor-mode and restart wlan1 interface 
 
 ## Pi-hole
-```
+To access Pi-hole management WebUI 
 http://pi.hole/admin/
-```
+
