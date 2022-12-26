@@ -1,11 +1,12 @@
 #!/bin/bash
 
+# Wifite to auto capture wpa handshake
 a=tmp
 b=wpa_supplicant-wlan1.conf
 c=/etc/wpa_supplicant
 d=~/conf_bak
 
-#sudo wifite -i wlan1 -p 15 --daemon --wpa --new-hs
+sudo wifite -i wlan1 -p 15 --daemon --wpa --new-hs
 
 grep -A 2 essid cracked.json > $a
 grep -v "bssid" $a > tmp2
