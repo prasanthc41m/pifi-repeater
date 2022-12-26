@@ -9,8 +9,8 @@ sudo systemctl enable systemd-networkd.service systemd-resolved.service
 sudo ln -sf /usr/lib/systemd/resolv.conf  /etc/resolv.conf
 
 cd /tmp
-git clone https://github.com/prasanthc41m/wifite-repeater.git
-cd wifite-repeater
+git clone https://github.com/prasanthc41m/pifi-repeater.git
+cd pifi-repeater
 
 sudo mv wpa_supplicant-wlan0.conf /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 sudo chmod 600 /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
@@ -47,12 +47,11 @@ sed -i "s/COMPILE_AESNI/NO_COMPILE_AESNI/" cpyrit/_cpyrit_cpu.c
 python2 setup.py build
 sudo python2 setup.py install
 
-mv wps-pwn.sh ~/
-mv pwn-mode.sh ~/
+mv *.sh ~/
 sudo chmod 755 *.sh
 sudo chmod 777 ~/hs/
 
-sudo rm -rf /tmp/wifite-repeater
+sudo rm -rf /tmp/pifi-repeater
 
 #Network-wide ad blocking
 curl -sSL https://install.pi-hole.net | bash
@@ -62,3 +61,4 @@ Line="cd ~/hs && python3 -m http.server"
 
 echo "rebooting..."
 sleep 2 && sudo reboot
+
