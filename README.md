@@ -12,6 +12,14 @@ First create a user called ```pi``` and run below command to install all needed 
 sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/install.sh && bash install.sh
 ```
+## Default Accesspoint ssid and password
+
+Default wifi creds of Repeater is SSID: ```Pifi``` and Password: ```Acc3sspo!nt```
+<br>To change Default Repeater SSID and Password ssh to pi and edit
+```
+sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+```
+
 ### Pi-hole installation for DNS and adfree network
 
 Choose interface ```wlan0``` and in next step choose ```setup static ip later or already configured``` option. 
@@ -41,17 +49,13 @@ Use auto pwn scripts below to pwn wifi and add cracked network to Accesspoint. A
 sudo systemctl enable pwnmode
 ```
 
-## Wps cracked keys and handshake file captured 
+## WebUI for Wps cracked keys and handshake file captured 
 
 Browse http://192.168.7.1:8000 or http://pi.fi:8000
 
-Browse http://192.168.7.1:81 or http://pi.fi:81 to add ssid and password of wifi which need to be extended.
+## WebUI for add/change ssid and password of wifi
 
-Default wifi creds of Repeater is SSID: ```Pifi``` and Password: ```Acc3sspo!nt```
-<br>To change Default Repeater SSID and Password ssh to pi and edit
-```
-sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
-```
+Browse http://192.168.7.1:81 or http://pi.hole:81 to add ssid and password of wifi which need to be extended.
 
 ## Pi-hole
 ```
