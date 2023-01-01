@@ -71,7 +71,7 @@ To check wifi connection status
 And you can use ```./wifistat.sh -r``` to disable monitor-mode and restart wlan1 interface 
 
 ## AdGuard
-To access AdGuard management WebUI 
+To access AdGuard management WebUI <br>
 http://192.168.7.1 or http://pi.fi
 
 To reset password <br>
