@@ -54,7 +54,7 @@ sudo chmod 777 ~/hs/
 sudo rm -rf /tmp/pifi-repeater
 
 #Network-wide ad blocking
-curl -sSL https://install.pi-hole.net | bash
+curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
 
 Line="cd ~/hs && python3 -m http.server"
 (crontab -u $(whoami) -l; echo "$line" ) | crontab -u $(whoami) -
