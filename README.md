@@ -20,9 +20,9 @@ Default wifi creds of Repeater is SSID: ```Pifi``` and Password: ```Acc3sspo!nt`
 sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 ```
 
-### Pi-hole installation for DNS and adfree network
+### AdGuard installation for DNS and adfree network
 
-Choose interface ```wlan0``` and in next step choose ```setup static ip later or already configured``` option. 
+Choose interface ```wlan0``` and all interface to be filtered. 
 Follow rest as recommended setting. ```Don't forget to note down the password for WebUI.```
 
 ## Uninstall
@@ -70,11 +70,11 @@ To check wifi connection status
 ```
 And you can use ```./wifistat.sh -r``` to disable monitor-mode and restart wlan1 interface 
 
-## Pi-hole
-To access Pi-hole management WebUI 
-http://pi.hole/admin/
+## AdGuard
+To access AdGuard management WebUI 
+http:/192.168.7.1
 To reset password 
 ```
-pihole -a -p
+
 ```
 
