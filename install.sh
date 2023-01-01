@@ -59,6 +59,8 @@ curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/s
 Line="cd ~/hs && python3 -m http.server"
 (crontab -u $(whoami) -l; echo "$line" ) | crontab -u $(whoami) -
 
+sudo bash -c 'echo "127.0.1.1               pi.fi" >> /etc/hosts'
+
 echo "rebooting..."
 sleep 2 && sudo reboot
 
