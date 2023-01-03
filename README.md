@@ -78,3 +78,7 @@ To reset password <br>
 https://www.reddit.com/r/Adguard/comments/xy11qv/i_need_to_change_my_password_in_adguard_home/
 https://www.truenas.com/community/threads/how-to-change-adguard-plugin-admin-password.98609/
 
+## Web shell installation instructions
+
+https://www.tecmint.com/shellinabox-web-based-ssh-linux-terminal/
+
