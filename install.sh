@@ -23,8 +23,8 @@ sudo systemctl disable wpa_supplicant.service
 sudo systemctl enable wpa_supplicant@wlan1.service
 
 sudo mv 08-wlan0.network /etc/systemd/network/08-wlan0.network
+sudo mv 08-eth0.network /etc/systemd/network/08-eth0.network
 sudo mv 12-wlan1.network /etc/systemd/network/12-wlan1.network
-sudo mv 12-wlan1.network /etc/systemd/network/12-eth0.network
 
 sudo -H pip install wifi
 sudo apt install python-flask python3-flask -y
