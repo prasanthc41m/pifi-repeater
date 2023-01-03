@@ -57,11 +57,11 @@ sudo systemctl enable pwnmode
 
 ## WebUI for Wps cracked keys and handshake file captured 
 
-Browse http://192.168.7.1:8000 or http://pi.hole:8000
+Browse http://192.168.7.1:8000 or http://pifi.local:8000
 
 ## WebUI for add/change ssid and password of wifi
 
-Browse http://192.168.7.1:81 or http://pi.hole:81 to add ssid and password of wifi which need to be extended.
+Browse http://192.168.7.1:81 or http://pifi.local:81 to add ssid and password of wifi which need to be extended.
 
 ## Connection status
 To check wifi connection status 
