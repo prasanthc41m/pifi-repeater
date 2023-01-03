@@ -61,7 +61,7 @@ Line="cd ~/hs && python3 -m http.server"
 (crontab -u $(whoami) -l; echo "$line" ) | crontab -u $(whoami) -
 
 sudo cp /etc/hosts /etc/hosts.bak
-sudo bash -c 'echo "192.168.7.1               pifi.local" >> /etc/hosts'
+sudo bash -c 'echo "192.168.7.1               pifi.ap" >> /etc/hosts'
 
 echo "rebooting..."
 sleep 2 && sudo reboot
