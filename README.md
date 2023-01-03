@@ -72,7 +72,7 @@ And you can use ```./wifistat.sh -r``` to disable monitor-mode and restart wlan1
 
 ## AdGuard
 To access AdGuard management WebUI <br>
-http://192.168.7.1 or http://pi.fi
+http://192.168.7.1 or http://pifi.local
 
 To reset password <br>
 https://www.reddit.com/r/Adguard/comments/xy11qv/i_need_to_change_my_password_in_adguard_home/
