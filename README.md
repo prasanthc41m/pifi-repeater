@@ -57,11 +57,11 @@ sudo systemctl enable pwnmode
 
 ## WebUI for Wps cracked keys and handshake file captured 
 
-Browse http://192.168.7.1:8000 or http://pifi.local:8000
+Browse http://192.168.7.1:8000 or http://pifi.ap:8000
 
 ## WebUI for add/change ssid and password of wifi
 
-Browse http://192.168.7.1:81 or http://pifi.local:81 to add ssid and password of wifi which need to be extended.
+Browse http://192.168.7.1:81 or http://pifi.ap:81 to add ssid and password of wifi which need to be extended.
 
 ## Connection status
 To check wifi connection status 
@@ -72,7 +72,7 @@ And you can use ```./wifistat.sh -r``` to disable monitor-mode and restart wlan1
 
 ## AdGuard
 To access AdGuard management WebUI <br>
-http://192.168.7.1 or http://pifi.local
+http://192.168.7.1 or http://pifi.ap
 
 To reset password <br>
 https://www.reddit.com/r/Adguard/comments/xy11qv/i_need_to_change_my_password_in_adguard_home/
