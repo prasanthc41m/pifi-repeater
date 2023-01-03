@@ -82,3 +82,6 @@ https://www.truenas.com/community/threads/how-to-change-adguard-plugin-admin-pas
 
 https://www.tecmint.com/shellinabox-web-based-ssh-linux-terminal/
 
+```
+https://192.168.7.1:4200/
+```
