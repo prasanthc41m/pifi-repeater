@@ -27,7 +27,9 @@ cut -c 64- tmp2 >> tmp
 
 echo "country=IN
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1" > header
+update_config=1" 
+
+> header
 
 cat tmp >> header
 cat $a >> header
