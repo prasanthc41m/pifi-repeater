@@ -14,7 +14,7 @@ python2 setup.py build
 sudo python2 setup.py install
 
 #Network-wide ad blocking
-curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
+#curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
 
 sudo systemctl mask networking.service dhmvcd.service
 sudo mv /etc/network/interfaces /etc/network/interfaces.bak
