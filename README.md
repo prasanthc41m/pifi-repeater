@@ -9,7 +9,6 @@ Direct access pi using a monitor, keyboard and internet.
 First create a user called ```pi``` and run below command to install all needed automatically.
 
 ```
-sudo su
 cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/main/install.sh && bash install.sh
 ```
 ## Default Accesspoint ssid and password
