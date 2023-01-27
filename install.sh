@@ -20,6 +20,7 @@ sudo sed -i '1i resolvconf=NO'  /etc/resolvconf.conf
 sudo systemctl enable systemd-networkd.service systemd-resolved.service
 sudo ln -sf /usr/lib/systemd/resolv.conf  /etc/resolv.conf
 
+mkdir ~/hs
 cd /tmp
 git clone https://github.com/prasanthc41m/pifi-repeater.git
 cd pifi-repeater
