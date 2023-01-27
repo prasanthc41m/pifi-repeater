@@ -4,7 +4,7 @@ sudo apt update
 
 sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger john cowpatty jq -y
 
-sudo apt-get install python3-scapy libssl-dev zlib1g-dev libpcap0.8-dev python2-dev python-is-python2
+sudo apt-get install -y python3-scapy libssl-dev zlib1g-dev libpcap0.8-dev python2-dev python-is-python2
 cd /tmp
 wget -c https://github.com/JPaulMora/Pyrit/archive/v0.5.0.tar.gz
 tar -xf v0.5.0.tar.gz
