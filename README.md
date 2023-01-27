@@ -71,6 +71,11 @@ To check wifi connection status
 And you can use ```./wifistat.sh -r``` to disable monitor-mode and restart wlan1 interface 
 
 ## AdGuard
+
+### Installation
+```
+curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
+```
 To access AdGuard management WebUI <br>
 http://192.168.7.1 or http://pifi.ap
 
