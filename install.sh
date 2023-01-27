@@ -1,6 +1,21 @@
 #!/usr/bin/bash
 
 sudo apt update
+
+sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger john cowpatty jq -y
+
+sudo apt-get install python3-scapy libssl-dev zlib1g-dev libpcap0.8-dev python2-dev python-is-python2
+cd /tmp
+wget -c https://github.com/JPaulMora/Pyrit/archive/v0.5.0.tar.gz
+tar -xf v0.5.0.tar.gz
+cd Pyrit-0.5.0
+sed -i "s/COMPILE_AESNI/NO_COMPILE_AESNI/" cpyrit/_cpyrit_cpu.c
+python2 setup.py build
+sudo python2 setup.py install
+
+#Network-wide ad blocking
+curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
+
 sudo systemctl mask networking.service dhmvcd.service
 sudo mv /etc/network/interfaces /etc/network/interfaces.bak
 sudo mv /etc/resolvconf.conf /etc/resolvconf.conf.bak
@@ -37,25 +52,11 @@ sudo systemctl enable webserver
 sudo systemctl start webserver
 sudo systemctl status webserver
 
-sudo apt install wifite bully reaver hashcat hcxtools hcxdumptool macchanger john cowpatty jq -y
-
-sudo apt-get install python3-scapy libssl-dev zlib1g-dev libpcap0.8-dev python2-dev python-is-python2
-cd /tmp
-wget -c https://github.com/JPaulMora/Pyrit/archive/v0.5.0.tar.gz
-tar -xf v0.5.0.tar.gz
-cd Pyrit-0.5.0
-sed -i "s/COMPILE_AESNI/NO_COMPILE_AESNI/" cpyrit/_cpyrit_cpu.c
-python2 setup.py build
-sudo python2 setup.py install
-
 mv *.sh ~/
 sudo chmod 755 *.sh
 sudo chmod 777 ~/hs/
 
 sudo rm -rf /tmp/pifi-repeater
-
-#Network-wide ad blocking
-curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
 
 Line="cd ~/hs && python3 -m http.server"
 (crontab -u $(whoami) -l; echo "$line" ) | crontab -u $(whoami) -
