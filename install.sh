@@ -13,9 +13,6 @@ sed -i "s/COMPILE_AESNI/NO_COMPILE_AESNI/" cpyrit/_cpyrit_cpu.c
 python2 setup.py build
 sudo python2 setup.py install
 
-#Network-wide ad blocking
-#curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
-
 sudo systemctl mask networking.service dhmvcd.service
 sudo mv /etc/network/interfaces /etc/network/interfaces.bak
 sudo mv /etc/resolvconf.conf /etc/resolvconf.conf.bak
@@ -63,6 +60,9 @@ Line="cd ~/hs && python3 -m http.server"
 
 sudo cp /etc/hosts /etc/hosts.bak
 sudo bash -c 'echo "192.168.7.1               pifi.ap" >> /etc/hosts'
+
+#Network-wide ad blocking
+curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
 
 echo "rebooting..."
 sleep 2 && sudo reboot
