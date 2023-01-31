@@ -13,7 +13,7 @@ cd /tmp && wget https://raw.githubusercontent.com/prasanthc41m/wifite-repeater/m
 ```
 ## Default Accesspoint ssid and password
 
-Default wifi creds of Repeater is SSID: ```Pifi``` and Password: ```Acc3sspo!nt```
+Default wifi creds of Repeater is SSID: ```Pifi``` and Password: ```pifipassword```
 <br>To change Default Repeater SSID and Password ssh to pi and edit
 ```
 sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
