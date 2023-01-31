@@ -22,6 +22,7 @@ sudo ln -sf /usr/lib/systemd/resolv.conf  /etc/resolv.conf
 
 cd /tmp
 git clone https://github.com/prasanthc41m/pifi-repeater.git
+cp pifi-repeater ~/
 cd pifi-repeater
 
 sudo mv wpa_supplicant-wlan0.conf /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
