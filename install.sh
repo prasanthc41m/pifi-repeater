@@ -14,7 +14,8 @@ python2 setup.py build
 sudo python2 setup.py install
 
 sudo -H pip install wifi
-sudo apt install python-flask python3-flask -y
+sudo apt install python3-flask -y
+sudo apt install python-flas
 
 sudo systemctl mask networking.service dhmvcd.service
 sudo mv /etc/network/interfaces /etc/network/interfaces.bak
