@@ -15,7 +15,7 @@ sudo python2 setup.py install
 
 sudo systemctl mask networking.service dhmvcd.service
 sudo mv /etc/network/interfaces /etc/network/interfaces.bak
-sudo mv /etc/resolvconf.conf /etc/resolvconf.conf.bak
+sudo cp /etc/resolvconf.conf /etc/resolvconf.conf.bak
 sudo sed -i '1i resolvconf=NO'  /etc/resolvconf.conf
 sudo systemctl enable systemd-networkd.service systemd-resolved.service
 sudo ln -sf /usr/lib/systemd/resolv.conf  /etc/resolv.conf
