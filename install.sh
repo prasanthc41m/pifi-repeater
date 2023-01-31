@@ -13,6 +13,9 @@ sed -i "s/COMPILE_AESNI/NO_COMPILE_AESNI/" cpyrit/_cpyrit_cpu.c
 python2 setup.py build
 sudo python2 setup.py install
 
+sudo -H pip install wifi
+sudo apt install python-flask python3-flask -y
+
 sudo systemctl mask networking.service dhmvcd.service
 sudo mv /etc/network/interfaces /etc/network/interfaces.bak
 sudo cp /etc/resolvconf.conf /etc/resolvconf.conf.bak
@@ -38,9 +41,6 @@ sudo systemctl enable wpa_supplicant@wlan1.service
 sudo mv 08-wlan0.network /etc/systemd/network/08-wlan0.network
 sudo mv 08-eth0.network /etc/systemd/network/08-eth0.network
 sudo mv 12-wlan1.network /etc/systemd/network/12-wlan1.network
-
-sudo -H pip install wifi
-sudo apt install python-flask python3-flask -y
 
 mv -r webui/ ~/
 sudo mv webserver.service /lib/systemd/system/webserver.service
