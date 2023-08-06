@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+cd /tmp
+git clone https://github.com/prasanthc41m/pifi-repeater.git
+cp pifi-repeater ~/
+cd pifi-repeater
+
 sudo apt update
 
 sudo apt install git wifite bully reaver hashcat hcxtools hcxdumptool macchanger john cowpatty jq -y
@@ -23,11 +28,6 @@ sudo cp /etc/resolvconf.conf /etc/resolvconf.conf.bak
 sudo sed -i '1i resolvconf=NO'  /etc/resolvconf.conf
 sudo systemctl enable systemd-networkd.service systemd-resolved.service
 sudo ln -sf /usr/lib/systemd/resolv.conf  /etc/resolv.conf
-
-cd /tmp
-git clone https://github.com/prasanthc41m/pifi-repeater.git
-cp pifi-repeater ~/
-cd pifi-repeater
 
 sudo mv wpa_supplicant-wlan0.conf /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 sudo chmod 600 /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
