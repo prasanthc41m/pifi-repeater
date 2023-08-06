@@ -52,7 +52,7 @@ sudo systemctl start webserver
 sudo systemctl status webserver
 
 mv *.sh ~/
-sudo chmod ~/755 *.sh
+sudo chmod 755 ~/*.sh
 mkdir ~/hs
 sudo chmod 777 ~/hs/
 
